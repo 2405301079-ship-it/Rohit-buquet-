@@ -1,0 +1,25 @@
+{
+  "name": "amore-co-backend",
+  "version": "1.0.0",
+  "description": "Boutique REST API Backend for Amore & Co. Gift Shop",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "keywords": [
+    "express",
+    "boutique",
+    "e-commerce",
+    "gift-shop"
+  ],
+  "author": "Amore & Co.",
+  "license": "ISC"
+}

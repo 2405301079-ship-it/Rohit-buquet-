@@ -1,0 +1,13 @@
+{
+  "name": "amore-co-boutique-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-Stack Romantic Gift Boutique — Frontend & Backend",
+  "scripts": {
+    "start:backend": "node stitch_eternal_love_gift_boutique/backend/src/server.js",
+    "dev:backend": "node --watch stitch_eternal_love_gift_boutique/backend/src/server.js",
+    "dev:frontend": "npm.cmd --prefix stitch_eternal_love_gift_boutique/frontend run dev",
+    "build:frontend": "npm.cmd --prefix stitch_eternal_love_gift_boutique/frontend run build",
+    "test:backend": "node stitch_eternal_love_gift_boutique/backend/test-api.mjs"
+  }
+}

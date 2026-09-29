@@ -1,0 +1,399 @@
+{
+  "relationships": [
+    {
+      "id": "girlfriend",
+      "title": "FOR GIRLFRIEND",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAK1KL_OdFBbom1CuXv5Wt95I6yKYAxJvNQ13l9j2e4gyqz09aW9a1v5qFliLha38HopINBZA8eowgLtC3qooBmwJfHXrNmt6FU4TvuGPWxpY6Efe48Pp_rsvljLnob7VsH8-Hz2CcuLWKyWphTdkPYYMNPvjhRZ9EPgS5NJuhkf7Rp8y3vGhsAcCpA0i7WQftKgfJfQqByEDFFRWnlN2MTb1ApD64yQLCfiV-k9ADIIww44digkOXkbQ",
+      "alt": "Romantic gifts for girlfriend",
+      "description": "Thoughtful, intimate keepsakes hand-finished with rose gold accents."
+    },
+    {
+      "id": "boyfriend",
+      "title": "FOR BOYFRIEND",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCmJg7bMghCNQzpQR-uj08Ny_SAxDVDPNmWqzNrgwjAuVL6ByRPAgdMKot1wAaKEtedCqXbrm4eZE4UrrwPicrb7dGZ4HZrezJzE2vajMMp25gAIBPkKMD_UU0isiPrAEBm3s1LYPnsBYLAXK2PK8ftgBS0CjnT3e3Lm9T534DDo1XPA90RAx4_zvH9qMlInCq3kndKKm8e0ZS8Ho_oAbHUwS8hrCfaZVfHlpuapOBLt5nEPZKW-NM8Cw",
+      "alt": "Thoughtful gifts for boyfriend",
+      "description": "Understated luxury, bespoke leatherwork, and daily rituals."
+    },
+    {
+      "id": "wife",
+      "title": "FOR WIFE",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDBfD-F28tU6PsiIHY3uzNHWIGYG7eeDra5cfY8YcNu28tUaMIZ57n5dGVJZhSx8KdY97J8Dv5xX3F6BS38cDR8vKTVSCwB5RxtGCVHk-T38iJTK9is6TfwRWeQqeveiACYn3pz2FBrmHZQB4LwzR55cpz-q2nz0I5ewV4-e7vHDQ3ntLUPu103K2jAMFzTY0Q_3P27OxXHvQ7uIHuYWw2HFDmDjrQEHE3NTk7XEqe59QsmpTuw7McV6g",
+      "alt": "Luxury gifts for wife",
+      "description": "Timeless elegance honoring every chapter of your shared story."
+    },
+    {
+      "id": "husband",
+      "title": "FOR HUSBAND",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAGUIghx2o4GzZO-QxtGQhwIXoISL8m338IMI_Bv9cTO0zmB1iI9tPRhAPDm5-ulFY2tsCC6IQGKO-mZFF-j9UKMr9pWxrDMxABX5ckFVT-7C5CJkeGZEGo_lA0bRGaUuWlxBJU5cDMRPT2MIKhDbt3pwxuCtU7_fGQ1RWiAyWyFwujziD0CAtkMePlLYnfYICBclXjC4LY4AoaKgmEggQl8Yv0Fi555_PDxJ6rgkXCuBmZOB0_5N9JNw",
+      "alt": "Classic gifts for husband",
+      "description": "Enduring craftsmanship designed to accompany his journey."
+    }
+  ],
+  "occasions": [
+    {
+      "id": "anniversary",
+      "label": "ANNIVERSARY",
+      "icon": "favorite",
+      "subtitle": "Celebrate your milestone"
+    },
+    {
+      "id": "birthday",
+      "label": "BIRTHDAY",
+      "icon": "cake",
+      "subtitle": "Their special day"
+    },
+    {
+      "id": "valentines",
+      "label": "VALENTINE'S",
+      "icon": "celebration",
+      "subtitle": "A tribute to devotion"
+    },
+    {
+      "id": "proposal",
+      "label": "PROPOSAL",
+      "icon": "diamond",
+      "subtitle": "The beginning of forever"
+    }
+  ],
+  "products": [
+    {
+      "id": "morning-love-mugs",
+      "title": "Morning Love Mugs",
+      "subtitle": "Handcrafted Ceramic Set with 24K Gold Engraving",
+      "price": 34,
+      "formattedPrice": "$34.00",
+      "category": [
+        "girlfriend",
+        "boyfriend",
+        "wife",
+        "husband"
+      ],
+      "occasions": [
+        "anniversary",
+        "valentines",
+        "birthday",
+        "proposal"
+      ],
+      "badge": "Best Seller",
+      "isFeatured": true,
+      "inStock": true,
+      "rating": 4.8,
+      "reviewCount": 128,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBUeaU5rrZKntrudiVQnVXjq7hJgC1SH6SlEAvKKPVEeeAhzSr1DIzydTQQBc91ZPKsuKcwKV6tLDSI_5n0O3qXfMkEN-Af1W3N9-hT0qladPw2lFXTFbzZzy4Rtp_ug5gQKOCfdrcZfBRo5gei3cM9bOA4kH2Y4EWisRBijLHFktYBa-y-UTFsj7mPNpbgQric2eUDoj9eWNKwoBwMrNTj9fQcq3Oeu9VXjr6iND6goRO9fCwCiSoAaQ",
+      "alt": "Morning Love Mugs",
+      "images": [
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuB6nOu3_p0s0rTGUI-_Ombrg4Gtw7S8F5xSpswcJHE5T-rF-l3WfYjbmt0ua6uzjBGeVzo0XezmiK8bsRaSoGEDcfRHLpVo4xk9-fwit32QAw9MWA4aXmgiVNEjOKuM1MEoZ0HUucP4hbRU6XKXEWIxmGnZCxpMBMCTsoYyfW9P1n5VO0q8ovNr9H_9PTmCpjTUC3TLj5rK9DrAy_UEftjvdAnS0feWOC-9_NR48W39B0KsvzxGkUrVsg",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOoBguGc6voou8Jv9He4i42xfJRZBbH0p1cqts1VJyINU0XirrCRk_Sv9nUXR_WPhShV0OHuFEZeou-C2Gycm77LnLNhMAH4DDxy0lH25yzviai-vqp-fW62oR9fulQg9sW6IQZDjJNQD7a-6346FgrD1ygjkbmAiBgM9wy92rbQ4f2JdnKGJzWfeiAXGwb6MskCK0ZKom3FoJztnv3P3Mkqp6nx7t6NCJTAgfjI6sQtWbCeS1sToiHw",
+          "alt": "Two premium ceramic coffee mugs labeled His and Hers in gold script"
+        },
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuBC4w5dE_eIErvPQ0wdPwsODXc5ir-9QFc9ZYIlsVTb5AyK_ngvkZyta4hoRyJkiFxc6Bq3vybQaoJbbmmBYg6MwIfFD_uSYPkUT6yEVSnzjgg_cYOImrpJL8T0Eaq8VFJIIHQthwrlj_Ln6dzCgcaEq1QL8js22wP1uz739ifD0cOr0HO-8a8ykbPDkLPEr8PAsnKSz-WDvcYJgwyp8UL71H_9rpaLWXF_2g4BvhL5G5hrdB1HctlIRA",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuDF__OtNCmpmNrTBqvI-wpMyYUKDm4d67bq67oh8n88QD1Y2ymI5jqNNgxsla4bN8apDUKj_9iBoPxpLmN67KJvrUZtY4Zyo-Uzwx7DdqVZYZd_fpKcz7okr_SBzioyzdlUdakXeTKdU5WmviorVZuRjvo9vHEAs_GrxH9mWtUo1MMDh1NnQC45h11vzgbtM4k9oDNSAFvlB_86BaJcV2P8YzGiYDeL1s1uaaji98_W4uq5Sl0KTAfcHw",
+          "alt": "Single cream ceramic mug with Mr and Mrs in modern serif font"
+        },
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuDypPs1smtecTPFkoJouj9wGqRB3W6WRbFcjkAFxhP8-5c298H70Tqa06kW-G3VKp0iDdx9OlE-5YKX3Cgpkg__w3KrPzwYA8v2nPtEols_7eh9WM5ARRLR_loeTby-s2gfAlx084pWzl6p8qTxo9Tw9fPa1eE3TJKfea7UmEfc4xzBJ0OG7Z0jGLbYOfbJJtNXpxylgbywkwfhO6270Y7KfrGQ48yUmnWlTuuslxuBUqfYIgroTfwP1w",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuAfyjf1AtFNTaQbmYXoZceCoYwRkHjzEg5J0rlP2nl8WuHTIHK8LhTuMs7t3LtXxXuKlzqZ1knknq4-zZRYlUOwjbaJAFIp7JP7oIi-Wl8CJnZgL8_DJg5Et7FEy1YKk5BL-k1AJZINhDCZ8OrUPkKq3epMiqQcUst41WAIlG28Ja2nZMma0sYYtA8IcLV-uvxnFbOlAATdJ--QQnWTE6qgVSzmZy-vRTfzdnDmc0aYg7TTSgNUbCzJLQ",
+          "alt": "Two personalized mugs with steaming coffee on a cozy rustic wooden tray"
+        }
+      ],
+      "description": "Start your mornings with intention and romance. Our premium ceramic mugs are designed with a comfortable, ergonomic handle and a smooth glaze finish. Personalize them to create a timeless keepsake that celebrates your unique bond. Perfect for weddings, anniversaries, or just because.",
+      "materials": [
+        "Premium high-fired porcelain ceramic.",
+        "11 oz capacity per vessel.",
+        "Dishwasher and microwave safe.",
+        "Gold leaf personalization is hand-applied and sealed with non-toxic thermal glaze."
+      ],
+      "shipping": "Personalized items are crafted with care and require 1-2 business days for engraving. Standard boutique delivery takes 3-5 business days with complimentary luxury gift packaging."
+    },
+    {
+      "id": "leather-keychains",
+      "title": "Leather Keychains",
+      "subtitle": "Italian Full-Grain Vegetable-Tanned Pair",
+      "price": 45,
+      "formattedPrice": "$45.00",
+      "category": [
+        "boyfriend",
+        "husband",
+        "girlfriend"
+      ],
+      "occasions": [
+        "anniversary",
+        "birthday"
+      ],
+      "badge": "Handcrafted",
+      "isFeatured": true,
+      "inStock": true,
+      "rating": 4.9,
+      "reviewCount": 94,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBDoeESIrU1cBJrzIxAQMHofEHrX6JtrLvF8zotYs4hTQTRiamWBc-_Rg_DkUc1AOhYTDCFPakvARvlyAhBI0uN_svwOkojt63RtR-oMeFTehty8jEGjXrF6B2Zgy2RlHGdxjNjlHk-ycItcphl03z_hkIh7JQOSm5TNDCWrcj6sLwGbjYhXevNuanDsDnor-N7sLWszY762V3sBv2-r_IC-_qBFTaZYbitqY5i_FKD267C9IjlqgQ7zQ",
+      "alt": "Leather Keychains",
+      "images": [
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuBDoeESIrU1cBJrzIxAQMHofEHrX6JtrLvF8zotYs4hTQTRiamWBc-_Rg_DkUc1AOhYTDCFPakvARvlyAhBI0uN_svwOkojt63RtR-oMeFTehty8jEGjXrF6B2Zgy2RlHGdxjNjlHk-ycItcphl03z_hkIh7JQOSm5TNDCWrcj6sLwGbjYhXevNuanDsDnor-N7sLWszY762V3sBv2-r_IC-_qBFTaZYbitqY5i_FKD267C9IjlqgQ7zQ",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuBDoeESIrU1cBJrzIxAQMHofEHrX6JtrLvF8zotYs4hTQTRiamWBc-_Rg_DkUc1AOhYTDCFPakvARvlyAhBI0uN_svwOkojt63RtR-oMeFTehty8jEGjXrF6B2Zgy2RlHGdxjNjlHk-ycItcphl03z_hkIh7JQOSm5TNDCWrcj6sLwGbjYhXevNuanDsDnor-N7sLWszY762V3sBv2-r_IC-_qBFTaZYbitqY5i_FKD267C9IjlqgQ7zQ",
+          "alt": "Bespoke Italian leather matching keychains"
+        }
+      ],
+      "description": "Rich Italian vegetable-tanned leather, paired with antiqued solid brass hardware. Embossed with your coordinates, wedding date, or initials.",
+      "materials": [
+        "100% full-grain Tuscan leather.",
+        "Solid brass key rings.",
+        "Hand-beveled burnished edges."
+      ],
+      "shipping": "Requires 1 business day for blind debossing. Delivered in our signature velvet pouch."
+    },
+    {
+      "id": "coasters",
+      "title": "Monogram Leather Coasters",
+      "subtitle": "Set of 4 Heritage Coasters",
+      "price": 45,
+      "formattedPrice": "$45.00",
+      "category": [
+        "husband",
+        "wife"
+      ],
+      "occasions": [
+        "anniversary",
+        "proposal"
+      ],
+      "badge": "Pairing",
+      "isFeatured": false,
+      "isCrossSell": true,
+      "inStock": true,
+      "rating": 4.7,
+      "reviewCount": 42,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCx3cBq-X5V7Q_ep1tkkiIOtx3J3OxD1UuHQXxVZJT-lRbTHpPRxoD_dYyHd_ddylu8CdW56My-ZJjrFWUHXz4SnsruXLRmTotf44iw6TCWAwZi_3Y0zWp-vhO8sqFDDYNwcb2C1tiWDlMnJNH_M2-2ignWzbHRJzkYq0fTQ8sOBXgYxKnJkktx3q4stgW-Fju7y76yODmkvL6HX46YoleGY-AJXJ3fULtMhnVYOa9Akl1lTTY_e49Mng",
+      "alt": "Monogrammed Leather Coasters",
+      "images": [
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuCx3cBq-X5V7Q_ep1tkkiIOtx3J3OxD1UuHQXxVZJT-lRbTHpPRxoD_dYyHd_ddylu8CdW56My-ZJjrFWUHXz4SnsruXLRmTotf44iw6TCWAwZi_3Y0zWp-vhO8sqFDDYNwcb2C1tiWDlMnJNH_M2-2ignWzbHRJzkYq0fTQ8sOBXgYxKnJkktx3q4stgW-Fju7y76yODmkvL6HX46YoleGY-AJXJ3fULtMhnVYOa9Akl1lTTY_e49Mng",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuCx3cBq-X5V7Q_ep1tkkiIOtx3J3OxD1UuHQXxVZJT-lRbTHpPRxoD_dYyHd_ddylu8CdW56My-ZJjrFWUHXz4SnsruXLRmTotf44iw6TCWAwZi_3Y0zWp-vhO8sqFDDYNwcb2C1tiWDlMnJNH_M2-2ignWzbHRJzkYq0fTQ8sOBXgYxKnJkktx3q4stgW-Fju7y76yODmkvL6HX46YoleGY-AJXJ3fULtMhnVYOa9Akl1lTTY_e49Mng",
+          "alt": "Monogrammed Leather Coasters"
+        }
+      ],
+      "description": "Protect surfaces in style with four water-resistant saddle leather coasters, heat-stamped with your shared initials.",
+      "materials": [
+        "Full-grain saddle leather",
+        "Cork bottom base"
+      ],
+      "shipping": "Ready to ship in 24 hours."
+    },
+    {
+      "id": "gift-box",
+      "title": "Signature Gift Box",
+      "subtitle": "Burgundy & Gold Foil Presentation Case",
+      "price": 15,
+      "formattedPrice": "$15.00",
+      "category": [
+        "girlfriend",
+        "boyfriend",
+        "wife",
+        "husband"
+      ],
+      "occasions": [
+        "anniversary",
+        "birthday",
+        "valentines",
+        "proposal"
+      ],
+      "badge": "Complimentary on Orders $50+",
+      "isFeatured": false,
+      "isCrossSell": true,
+      "inStock": true,
+      "rating": 5,
+      "reviewCount": 310,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuApV7bQLPvQcF66yuOFrZbEDEFIX3NntrUZzQo_ZzoWDy7zpFf3H6AJdShWdHycCkRf7NaJMpYMKRhSQ7wt4I3QR0PDuAe3thzhR2uLOkdWS_AdTXHMhcYyU2nRgouXLwNYSjvIkF6l4vCVwjz5mjT1MIHnptEoJCWkXf3I-wyVjRgTpAuaRjZXMoKhDNlw0qB_sVGZvl98XY_PxM1D7q4Pozxq0YIpwhU67VY-ZwVH3coJ7sAVh-1UxA",
+      "alt": "Signature Gift Box with gold ribbon",
+      "images": [
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuApV7bQLPvQcF66yuOFrZbEDEFIX3NntrUZzQo_ZzoWDy7zpFf3H6AJdShWdHycCkRf7NaJMpYMKRhSQ7wt4I3QR0PDuAe3thzhR2uLOkdWS_AdTXHMhcYyU2nRgouXLwNYSjvIkF6l4vCVwjz5mjT1MIHnptEoJCWkXf3I-wyVjRgTpAuaRjZXMoKhDNlw0qB_sVGZvl98XY_PxM1D7q4Pozxq0YIpwhU67VY-ZwVH3coJ7sAVh-1UxA",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuApV7bQLPvQcF66yuOFrZbEDEFIX3NntrUZzQo_ZzoWDy7zpFf3H6AJdShWdHycCkRf7NaJMpYMKRhSQ7wt4I3QR0PDuAe3thzhR2uLOkdWS_AdTXHMhcYyU2nRgouXLwNYSjvIkF6l4vCVwjz5mjT1MIHnptEoJCWkXf3I-wyVjRgTpAuaRjZXMoKhDNlw0qB_sVGZvl98XY_PxM1D7q4Pozxq0YIpwhU67VY-ZwVH3coJ7sAVh-1UxA",
+          "alt": "Signature Gift Box with gold ribbon"
+        }
+      ],
+      "description": "Rigid keepsake box wrapped in deep burgundy linen paper, lined with satin and tied by hand with a metallic gold grosgrain ribbon.",
+      "materials": [
+        "Linen paperboard",
+        "Gold foil crest",
+        "Double-faced satin lining"
+      ],
+      "shipping": "Ships with your gift order."
+    },
+    {
+      "id": "coffee",
+      "title": "Artisanal Coffee Blend",
+      "subtitle": "Single-Origin Ethiopian Honey Roasted",
+      "price": 22,
+      "formattedPrice": "$22.00",
+      "category": [
+        "girlfriend",
+        "boyfriend"
+      ],
+      "occasions": [
+        "birthday",
+        "anniversary"
+      ],
+      "badge": "Gourmet",
+      "isFeatured": false,
+      "isCrossSell": true,
+      "inStock": true,
+      "rating": 4.9,
+      "reviewCount": 67,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvkJGcl0oSETIbwnGViXgVs-9leFbCSIyGIkAKFAO461X2JVeTC42H637ASZ4X78KtARwdKzzAzSsX46lhz29Su_Yu30eunm1DVvaiwdUOjZh1EeUwcYCH_CWAW1UWWBNApk-yYgwWXDxwkly2LtgJ4ynDx2CZK4iuryhwfhkx4Yrm_7PWubiMoWdbgx7VbqWPFBx-jByY-Id8zp8UCqTYuQuxC0EW0gLMOEr7EkZcd3YopFNq4KhTQg",
+      "alt": "Artisanal Coffee Blend package",
+      "images": [
+        {
+          "full": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvkJGcl0oSETIbwnGViXgVs-9leFbCSIyGIkAKFAO461X2JVeTC42H637ASZ4X78KtARwdKzzAzSsX46lhz29Su_Yu30eunm1DVvaiwdUOjZh1EeUwcYCH_CWAW1UWWBNApk-yYgwWXDxwkly2LtgJ4ynDx2CZK4iuryhwfhkx4Yrm_7PWubiMoWdbgx7VbqWPFBx-jByY-Id8zp8UCqTYuQuxC0EW0gLMOEr7EkZcd3YopFNq4KhTQg",
+          "thumb": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvkJGcl0oSETIbwnGViXgVs-9leFbCSIyGIkAKFAO461X2JVeTC42H637ASZ4X78KtARwdKzzAzSsX46lhz29Su_Yu30eunm1DVvaiwdUOjZh1EeUwcYCH_CWAW1UWWBNApk-yYgwWXDxwkly2LtgJ4ynDx2CZK4iuryhwfhkx4Yrm_7PWubiMoWdbgx7VbqWPFBx-jByY-Id8zp8UCqTYuQuxC0EW0gLMOEr7EkZcd3YopFNq4KhTQg",
+          "alt": "Artisanal Coffee Blend package"
+        }
+      ],
+      "description": "Tasting notes of sweet jasmine, bergamot, and wildflower honey. Hand-roasted in small batches to accompany morning coffee together.",
+      "materials": [
+        "100% Arabica whole bean (12 oz)",
+        "Degassing valve seal"
+      ],
+      "shipping": "Roasted fresh weekly."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "productId": "morning-love-mugs",
+      "author": "Eleanor & Liam S.",
+      "rating": 5,
+      "date": "2026-08-14",
+      "headline": "The most treasured anniversary gift we received!",
+      "comment": "The gold engraving is impeccable. The ceramic has that weighty, luxurious feel you only find in artisan boutique pottery. We use them every Sunday morning.",
+      "verified": true
+    },
+    {
+      "id": "rev-2",
+      "productId": "morning-love-mugs",
+      "author": "Marcus V.",
+      "rating": 5,
+      "date": "2026-07-29",
+      "headline": "Surpassed all expectations.",
+      "comment": "Ordered for our 5th wedding anniversary with our original date engraved. My wife was genuinely moved to tears when she saw the custom script. The packaging is pure luxury.",
+      "verified": true
+    },
+    {
+      "id": "rev-3",
+      "productId": "morning-love-mugs",
+      "author": "Sophia K.",
+      "rating": 4,
+      "date": "2026-06-18",
+      "headline": "Stunning craftsmanship and presentation",
+      "comment": "Arrived securely packaged in the burgundy box with gold ribbon. Handles are ultra comfortable.",
+      "verified": true
+    }
+  ],
+  "cart": [],
+  "wishlist": [
+    "morning-love-mugs"
+  ],
+  "orders": [
+    {
+      "id": "AMORE-813879",
+      "customerName": "Elena Rostova",
+      "customerEmail": "elena.rostova@example.com",
+      "shippingAddress": "450 Fifth Avenue, New York, NY 10018",
+      "giftMessage": "To my beloved Julian, forever and always. Happy Anniversary!",
+      "recipientName": "Julian Rostova",
+      "items": [
+        {
+          "cartItemId": "966f10ac-6729-4741-b162-ffa8eb67f3ca",
+          "id": "morning-love-mugs",
+          "title": "Morning Love Mugs",
+          "price": 34,
+          "formattedPrice": "$34.00",
+          "image": "",
+          "quantity": 1,
+          "customization": {
+            "mug1Name": "Elena",
+            "mug2Name": "Julian",
+            "estDate": "2024-02-14",
+            "fontStyle": "elegant"
+          },
+          "addedAt": "2026-09-22T18:51:44.130Z"
+        }
+      ],
+      "subtotal": 34,
+      "shippingFee": 0,
+      "total": 34,
+      "status": "In Handcrafting & Engraving",
+      "paymentMethod": "Complimentary Boutique Experience",
+      "createdAt": "2026-09-22T18:51:44.141Z",
+      "estimatedDelivery": "2026-09-27"
+    },
+    {
+      "id": "AMORE-558885",
+      "customerName": "Elena Rostova",
+      "customerEmail": "elena.rostova@example.com",
+      "shippingAddress": "450 Fifth Avenue, New York, NY 10018",
+      "giftMessage": "To my beloved Julian, forever and always. Happy Anniversary!",
+      "recipientName": "Julian Rostova",
+      "items": [
+        {
+          "cartItemId": "0e82a8ac-0525-4d2e-81b6-a3fba26e3b4f",
+          "id": "morning-love-mugs",
+          "title": "Morning Love Mugs",
+          "price": 34,
+          "formattedPrice": "$34.00",
+          "image": "",
+          "quantity": 1,
+          "customization": {
+            "mug1Name": "Elena",
+            "mug2Name": "Julian",
+            "estDate": "2024-02-14",
+            "fontStyle": "elegant"
+          },
+          "addedAt": "2026-09-22T18:48:49.169Z"
+        }
+      ],
+      "subtotal": 34,
+      "shippingFee": 0,
+      "total": 34,
+      "status": "In Handcrafting & Engraving",
+      "paymentMethod": "Complimentary Boutique Experience",
+      "createdAt": "2026-09-22T18:48:49.183Z",
+      "estimatedDelivery": "2026-09-27"
+    },
+    {
+      "id": "ORD-94281",
+      "customerName": "Julian Vance",
+      "customerEmail": "julian.vance@example.com",
+      "shippingAddress": "742 Evergreen Terrace, Suite 4B, New York, NY 10001",
+      "giftMessage": "To my forever love, happy 3rd anniversary. Here is to a lifetime of morning coffee together.",
+      "items": [
+        {
+          "id": "morning-love-mugs",
+          "title": "Morning Love Mugs",
+          "price": 34,
+          "quantity": 1,
+          "customization": {
+            "mug1Name": "Julian",
+            "mug2Name": "Elena",
+            "estDate": "2023-09-15",
+            "fontStyle": "elegant"
+          }
+        },
+        {
+          "id": "gift-box",
+          "title": "Signature Gift Box",
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 49,
+      "discount": 0,
+      "shippingFee": 0,
+      "total": 49,
+      "status": "Handcrafting & Engraving",
+      "createdAt": "2026-09-20T14:22:10.000Z",
+      "estimatedDelivery": "2026-09-26"
+    }
+  ]
+}

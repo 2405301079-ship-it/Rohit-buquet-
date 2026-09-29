@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #570013;
+  --primary-container: #800020;
+  --secondary: #735c00;
+  --gold: #D4AF37;
+  --surface: #fbf9f1;
+  --surface-low: #f5f4ec;
+  --on-surface: #1b1c17;
+  --on-surface-variant: #584141;
+  --outline-variant: #e0bfbf;
+  --blush: #FDF2F2;
+  --ivory: #FFFDF5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFDF5;
+  color: #1b1c17;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .font-serif-title {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Premium Shadows */
+.premium-shadow {
+  box-shadow: 0px 4px 20px rgba(128, 0, 32, 0.04);
+}
+
+.custom-shadow {
+  box-shadow: 0px 4px 20px rgba(128, 0, 32, 0.06);
+}
+
+.elevation-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elevation-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 30px rgba(128, 0, 32, 0.08);
+}
+
+/* Buttons */
+.btn-hover-glow {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-glow:hover {
+  box-shadow: 0px 8px 24px rgba(212, 175, 55, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Signature Dividers */
+.signature-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.4), #FDF2F2, rgba(212, 175, 55, 0.4), transparent);
+  position: relative;
+  margin: 40px 0;
+}
+
+.signature-divider::after {
+  content: '♥';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #D4AF37;
+  font-size: 11px;
+  background: #FFFDF5;
+  padding: 0 10px;
+}
+
+.signature-divider-dot {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+  position: relative;
+}
+
+.signature-divider-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: #D4AF37;
+  border-radius: 50%;
+}
+
+/* Scrollbars */
+.no-scrollbar::-webkit-scrollbar,
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar,
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Label caps */
+.label-caps {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

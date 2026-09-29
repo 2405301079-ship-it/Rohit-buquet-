@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore &amp; Co. | React Preview</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React 18 & ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <!-- Babel for inline JSX compilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#570013",
+            "primary-container": "#800020",
+            "secondary": "#735c00",
+            "gold": "#D4AF37",
+            "surface": "#fbf9f1",
+            "on-surface": "#1b1c17",
+            "on-surface-variant": "#584141",
+            "outline-variant": "#e0bfbf",
+            "blush": "#FDF2F2",
+            "ivory": "#FFFDF5"
+          },
+          fontFamily: {
+            "serif": ["Playfair Display", "serif"],
+            "sans": ["Montserrat", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FFFDF5;
+      color: #1b1c17;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .premium-shadow {
+      box-shadow: 0px 4px 20px rgba(128, 0, 32, 0.04);
+    }
+    .custom-shadow {
+      box-shadow: 0px 4px 20px rgba(128, 0, 32, 0.06);
+    }
+    .btn-hover-glow:hover {
+      box-shadow: 0px 8px 24px rgba(212, 175, 55, 0.35);
+      transform: translateY(-1px);
+    }
+    .signature-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.4), #FDF2F2, rgba(212, 175, 55, 0.4), transparent);
+      position: relative;
+      margin: 40px 0;
+    }
+    .signature-divider::after {
+      content: '♥';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #D4AF37;
+      font-size: 11px;
+      background: #FFFDF5;
+      padding: 0 10px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const relationships = [
+      { id: "girlfriend", title: "FOR GIRLFRIEND", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAK1KL_OdFBbom1CuXv5Wt95I6yKYAxJvNQ13l9j2e4gyqz09aW9a1v5qFliLha38HopINBZA8eowgLtC3qooBmwJfHXrNmt6FU4TvuGPWxpY6Efe48Pp_rsvljLnob7VsH8-Hz2CcuLWKyWphTdkPYYMNPvjhRZ9EPgS5NJuhkf7Rp8y3vGhsAcCpA0i7WQftKgfJfQqByEDFFRWnlN2MTb1ApD64yQLCfiV-k9ADIIww44digkOXkbQ" },
+      { id: "boyfriend", title: "FOR BOYFRIEND", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmJg7bMghCNQzpQR-uj08Ny_SAxDVDPNmWqzNrgwjAuVL6ByRPAgdMKot1wAaKEtedCqXbrm4eZE4UrrwPicrb7dGZ4HZrezJzE2vajMMp25gAIBPkKMD_UU0isiPrAEBm3s1LYPnsBYLAXK2PK8ftgBS0CjnT3e3Lm9T534DDo1XPA90RAx4_zvH9qMlInCq3kndKKm8e0ZS8Ho_oAbHUwS8hrCfaZVfHlpuapOBLt5nEPZKW-NM8Cw" },
+      { id: "wife", title: "FOR WIFE", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDBfD-F28tU6PsiIHY3uzNHWIGYG7eeDra5cfY8YcNu28tUaMIZ57n5dGVJZhSx8KdY97J8Dv5xX3F6BS38cDR8vKTVSCwB5RxtGCVHk-T38iJTK9is6TfwRWeQqeveiACYn3pz2FBrmHZQB4LwzR55cpz-q2nz0I5ewV4-e7vHDQ3ntLUPu103K2jAMFzTY0Q_3P27OxXHvQ7uIHuYWw2HFDmDjrQEHE3NTk7XEqe59QsmpTuw7McV6g" },
+      { id: "husband", title: "FOR HUSBAND", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAGUIghx2o4GzZO-QxtGQhwIXoISL8m338IMI_Bv9cTO0zmB1iI9tPRhAPDm5-ulFY2tsCC6IQGKO-mZFF-j9UKMr9pWxrDMxABX5ckFVT-7C5CJkeGZEGo_lA0bRGaUuWlxBJU5cDMRPT2MIKhDbt3pwxuCtU7_fGQ1RWiAyWyFwujziD0CAtkMePlLYnfYICBclXjC4LY4AoaKgmEggQl8Yv0Fi555_PDxJ6rgkXCuBmZOB0_5N9JNw" }
+    ];
+
+    const occasions = [
+      { id: "anniversary", label: "ANNIVERSARY", icon: "favorite" },
+      { id: "birthday", label: "BIRTHDAY", icon: "cake" },
+      { id: "valentines", label: "VALENTINE'S", icon: "celebration" },
+      { id: "proposal", label: "PROPOSAL", icon: "diamond" }
+    ];
+
+    const featuredProducts = [
+      {
+        id: "morning-love-mugs",
+        title: "Morning Love Mugs",
+        price: "$34.00",
+        badge: "BEST SELLER",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUeaU5rrZKntrudiVQnVXjq7hJgC1SH6SlEAvKKPVEeeAhzSr1DIzydTQQBc91ZPKsuKcwKV6tLDSI_5n0O3qXfMkEN-Af1W3N9-hT0qladPw2lFXTFbzZzy4Rtp_ug5gQKOCfdrcZfBRo5gei3cM9bOA4kH2Y4EWisRBijLHFktYBa-y-UTFsj7mPNpbgQric2eUDoj9eWNKwoBwMrNTj9fQcq3Oeu9VXjr6iND6goRO9fCwCiSoAaQ"
+      },
+      {
+        id: "leather-keychains",
+        title: "Leather Keychains",
+        price: "$45.00",
+        badge: null,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBDoeESIrU1cBJrzIxAQMHofEHrX6JtrLvF8zotYs4hTQTRiamWBc-_Rg_DkUc1AOhYTDCFPakvARvlyAhBI0uN_svwOkojt63RtR-oMeFTehty8jEGjXrF6B2Zgy2RlHGdxjNjlHk-ycItcphl03z_hkIh7JQOSm5TNDCWrcj6sLwGbjYhXevNuanDsDnor-N7sLWszY762V3sBv2-r_IC-_qBFTaZYbitqY5i_FKD267C9IjlqgQ7zQ"
+      }
+    ];
+
+    const productImages = [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuB6nOu3_p0s0rTGUI-_Ombrg4Gtw7S8F5xSpswcJHE5T-rF-l3WfYjbmt0ua6uzjBGeVzo0XezmiK8bsRaSoGEDcfRHLpVo4xk9-fwit32QAw9MWA4aXmgiVNEjOKuM1MEoZ0HUucP4hbRU6XKXEWIxmGnZCxpMBMCTsoYyfW9P1n5VO0q8ovNr9H_9PTmCpjTUC3TLj5rK9DrAy_UEftjvdAnS0feWOC-9_NR48W39B0KsvzxGkUrVsg",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBC4w5dE_eIErvPQ0wdPwsODXc5ir-9QFc9ZYIlsVTb5AyK_ngvkZyta4hoRyJkiFxc6Bq3vybQaoJbbmmBYg6MwIfFD_uSYPkUT6yEVSnzjgg_cYOImrpJL8T0Eaq8VFJIIHQthwrlj_Ln6dzCgcaEq1QL8js22wP1uz739ifD0cOr0HO-8a8ykbPDkLPEr8PAsnKSz-WDvcYJgwyp8UL71H_9rpaLWXF_2g4BvhL5G5hrdB1HctlIRA",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDypPs1smtecTPFkoJouj9wGqRB3W6WRbFcjkAFxhP8-5c298H70Tqa06kW-G3VKp0iDdx9OlE-5YKX3Cgpkg__w3KrPzwYA8v2nPtEols_7eh9WM5ARRLR_loeTby-s2gfAlx084pWzl6p8qTxo9Tw9fPa1eE3TJKfea7UmEfc4xzBJ0OG7Z0jGLbYOfbJJtNXpxylgbywkwfhO6270Y7KfrGQ48yUmnWlTuuslxuBUqfYIgroTfwP1w"
+    ];
+
+    const crossSellItems = [
+      { id: "c1", title: "Monogram Leather Coasters", price: "$45.00", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCx3cBq-X5V7Q_ep1tkkiIOtx3J3OxD1UuHQXxVZJT-lRbTHpPRxoD_dYyHd_ddylu8CdW56My-ZJjrFWUHXz4SnsruXLRmTotf44iw6TCWAwZi_3Y0zWp-vhO8sqFDDYNwcb2C1tiWDlMnJNH_M2-2ignWzbHRJzkYq0fTQ8sOBXgYxKnJkktx3q4stgW-Fju7y76yODmkvL6HX46YoleGY-AJXJ3fULtMhnVYOa9Akl1lTTY_e49Mng" },
+      { id: "c2", title: "Signature Gift Box", price: "$15.00", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuApV7bQLPvQcF66yuOFrZbEDEFIX3NntrUZzQo_ZzoWDy7zpFf3H6AJdShWdHycCkRf7NaJMpYMKRhSQ7wt4I3QR0PDuAe3thzhR2uLOkdWS_AdTXHMhcYyU2nRgouXLwNYSjvIkF6l4vCVwjz5mjT1MIHnptEoJCWkXf3I-wyVjRgTpAuaRjZXMoKhDNlw0qB_sVGZvl98XY_PxM1D7q4Pozxq0YIpwhU67VY-ZwVH3coJ7sAVh-1UxA" },
+      { id: "c3", title: "Artisanal Coffee Blend", price: "$22.00", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvkJGcl0oSETIbwnGViXgVs-9leFbCSIyGIkAKFAO461X2JVeTC42H637ASZ4X78KtARwdKzzAzSsX46lhz29Su_Yu30eunm1DVvaiwdUOjZh1EeUwcYCH_CWAW1UWWBNApk-yYgwWXDxwkly2LtgJ4ynDx2CZK4iuryhwfhkx4Yrm_7PWubiMoWdbgx7VbqWPFBx-jByY-Id8zp8UCqTYuQuxC0EW0gLMOEr7EkZcd3YopFNq4KhTQg" }
+    ];
+
+    function App() {
+      const [page, setPage] = useState('home');
+      const [cart, setCart] = useState([]);
+      const [wishlist, setWishlist] = useState(['morning-love-mugs']);
+      const [toast, setToast] = useState(null);
+      const [activeImg, setActiveImg] = useState(0);
+
+      // Customization state
+      const [mug1, setMug1] = useState('Hers');
+      const [mug2, setMug2] = useState('His');
+      const [date, setDate] = useState('2024-02-14');
+      const [style, setStyle] = useState('elegant');
+      const [addedAnim, setAddedAnim] = useState(false);
+
+      const triggerToast = (msg) => {
+        setToast(msg);
+        setTimeout(() => setToast(null), 3000);
+      };
+
+      const handleAddToCart = (name) => {
+        setCart((prev) => [...prev, name]);
+        setAddedAnim(true);
+        setTimeout(() => setAddedAnim(false), 2000);
+        triggerToast(`"${name}" added to your Gift Box ♥`);
+      };
+
+      const toggleWish = (id) => {
+        setWishlist((prev) =>
+          prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+        );
+        triggerToast('Wishlist updated ♥');
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col bg-[#FFFDF5]">
+          {/* Top Bar */}
+          <header className="fixed top-0 w-full z-50 bg-[#fbf9f1]/90 backdrop-blur-md shadow-sm border-b border-[#e0bfbf]/40">
+            <div className="flex justify-between items-center px-4 md:px-12 h-16 max-w-7xl mx-auto">
+              <div className="flex items-center space-x-3">
+                {page === 'detail' ? (
+                  <button
+                    onClick={() => setPage('home')}
+                    className="flex items-center text-sm font-semibold text-[#570013] p-1.5 rounded-full hover:bg-[#FDF2F2]"
+                  >
+                    <span className="material-symbols-outlined mr-1">arrow_back</span>
+                    <span>Boutique</span>
+                  </button>
+                ) : (
+                  <button className="p-2 text-[#584141]">
+                    <span className="material-symbols-outlined">menu</span>
+                  </button>
+                )}
+                <nav className="hidden md:flex space-x-6 ml-4">
+                  <button
+                    onClick={() => setPage('home')}
+                    className={`text-xs uppercase tracking-widest font-semibold ${page === 'home' ? 'text-[#570013] border-b-2 border-[#570013]' : 'text-[#584141]'}`}
+                  >
+                    Collection
+                  </button>
+                  <button
+                    onClick={() => setPage('detail')}
+                    className={`text-xs uppercase tracking-widest font-semibold ${page === 'detail' ? 'text-[#570013] border-b-2 border-[#570013]' : 'text-[#584141]'}`}
+                  >
+                    Personalize Mugs
+                  </button>
+                </nav>
+              </div>
+
+              <div onClick={() => setPage('home')} className="cursor-pointer text-center">
+                <h1 className="font-serif text-2xl md:text-3xl font-bold text-[#570013] italic">
+                  Amore &amp; Co.
+                </h1>
+              </div>
+
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <button className="p-2 text-[#584141] hover:text-[#570013]">
+                  <span className="material-symbols-outlined text-[22px]">search</span>
+                </button>
+                <div className="p-2 text-[#584141] relative cursor-pointer">
+                  <span className="material-symbols-outlined text-[22px]">shopping_bag</span>
+                  {cart.length > 0 && (
+                    <span className="absolute top-1 right-1 w-4 h-4 bg-[#D4AF37] text-[#570013] text-[10px] font-bold rounded-full flex items-center justify-center">
+                      {cart.length}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </header>
+
+          {/* Body content */}
+          <main className="flex-grow pt-16">
+            {page === 'home' ? (
+              <div>
+                {/* Hero */}
+                <section className="relative w-full h-[620px] flex items-end pb-16 px-4 bg-[#FFFDF5]">
+                  <div className="absolute inset-0 z-0 overflow-hidden rounded-b-[2.5rem]">
+                    <div
+                      className="w-full h-full bg-cover bg-center"
+                      style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpAZLmaxl0kWM4lbkQS_Ri8gopUrXpjEiXvNV6wOCb0_hznVi3UL7FG9gZEw63xVwPpNQPAug2b5sre7Htj5jAKtajSRfdtBX-WwFu9gEqXPlNM4ReB_gbUv_9jSym3hgh_NkmS3uj9WZgKu_HgejR3mxe_WjtyX_F_K6EAorCO1h1sNxntmcyvULHHURTbqVbgD4L3LKo4_fJ1xsrNoaCrKLLjG42wfpMM7rBDjwS_ZVE4rMGd-YLlg')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#FFFDF5] via-[#FFFDF5]/40 to-transparent" />
+                  </div>
+                  <div className="relative z-10 w-full max-w-xl mx-auto text-center">
+                    <h2 className="font-serif text-3xl sm:text-5xl text-[#570013] font-bold leading-tight mb-4">
+                      Gifts That Say What Words Can't <span className="text-[#D4AF37]">♥</span>
+                    </h2>
+                    <p className="text-sm sm:text-base text-[#584141] mb-8">
+                      Make every moment special with thoughtful gifts made for couples and the people you love.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-sm mx-auto">
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById('home-products');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="px-8 py-3.5 rounded-full bg-[#570013] text-white text-xs font-bold tracking-widest uppercase shadow-md hover:bg-[#800020] btn-hover-glow"
+                      >
+                        SHOP COUPLE GIFTS
+                      </button>
+                      <button
+                        onClick={() => setPage('detail')}
+                        className="px-8 py-3.5 rounded-full border border-[#570013] text-[#570013] bg-white/80 text-xs font-bold tracking-widest uppercase hover:bg-[#FDF2F2]"
+                      >
+                        EXPLORE PERSONALIZED
+                      </button>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Relationships */}
+                <section className="py-12 px-4 max-w-5xl mx-auto text-center">
+                  <h3 className="font-serif text-2xl text-[#570013] mb-8">Shop by Relationship</h3>
+                  <div className="flex justify-center overflow-x-auto gap-6 no-scrollbar pb-2">
+                    {relationships.map((rel) => (
+                      <div
+                        key={rel.id}
+                        onClick={() => setPage('detail')}
+                        className="w-32 cursor-pointer group flex-shrink-0"
+                      >
+                        <div className="w-32 h-32 rounded-full overflow-hidden mb-3 border-2 border-[#FDF2F2] group-hover:border-[#D4AF37] premium-shadow transition-all">
+                          <img src={rel.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <p className="text-xs font-bold tracking-wider text-[#570013] uppercase">{rel.title}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <div className="signature-divider max-w-3xl mx-auto" />
+
+                {/* Occasions */}
+                <section className="py-8 px-4 max-w-4xl mx-auto text-center">
+                  <h3 className="font-serif text-2xl text-[#570013] mb-6">Shop by Occasion</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {occasions.map((occ) => (
+                      <div
+                        key={occ.id}
+                        onClick={() => setPage('detail')}
+                        className="bg-white rounded-2xl p-5 border border-[#FDF2F2] premium-shadow hover:scale-105 transition-all cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-[#570013] text-2xl mb-2" style={{ fontVariationSettings: "'FILL' 1" }}>
+                          {occ.icon}
+                        </span>
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#1b1c17]">{occ.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Made for Two */}
+                <section id="home-products" className="py-16 px-4 bg-[#FDF2F2]/40 mt-8">
+                  <div className="max-w-4xl mx-auto text-center">
+                    <h3 className="font-serif text-3xl text-[#570013] font-bold mb-8">Made for Two</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                      {featuredProducts.map((p) => (
+                        <div
+                          key={p.id}
+                          onClick={() => setPage('detail')}
+                          className="bg-white rounded-2xl overflow-hidden premium-shadow cursor-pointer hover:shadow-xl transition-all group"
+                        >
+                          <div className="relative h-60 overflow-hidden bg-[#f0eee6]">
+                            {p.badge && (
+                              <span className="absolute top-3 left-3 bg-[#FDF2F2] text-[#570013] text-[10px] font-bold px-2.5 py-1 rounded uppercase z-10">
+                                {p.badge}
+                              </span>
+                            )}
+                            <img src={p.image} className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500" />
+                          </div>
+                          <div className="p-4 text-center">
+                            <h4 className="font-serif text-lg font-semibold text-[#1b1c17] mb-1">{p.title}</h4>
+                            <p className="text-[#570013] font-bold text-sm">{p.price}</p>
+                            <span className="text-[10px] text-[#735c00] uppercase font-bold tracking-wider mt-2 inline-block">
+                              Tap to Personalize →
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              </div>
+            ) : (
+              /* Product Detail Page */
+              <div className="px-4 md:px-12 max-w-6xl mx-auto pb-16 pt-4">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                  {/* Left: Gallery */}
+                  <div className="md:col-span-7">
+                    <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#f0eee6] custom-shadow mb-4">
+                      <img src={productImages[activeImg]} className="w-full h-full object-cover" />
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+                        {productImages.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setActiveImg(idx)}
+                            className={`w-2.5 h-2.5 rounded-full ${activeImg === idx ? 'bg-[#D4AF37] w-6' : 'bg-white/80'}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex space-x-3">
+                      {productImages.map((url, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveImg(idx)}
+                          className={`w-20 h-20 rounded-xl overflow-hidden border-2 ${activeImg === idx ? 'border-[#570013]' : 'border-transparent'}`}
+                        >
+                          <img src={url} className="w-full h-full object-cover" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right: Personalize */}
+                  <div className="md:col-span-5 flex flex-col">
+                    <span className="inline-block px-3 py-1 bg-[#eae8e0] rounded-full text-[10px] font-bold text-[#570013] uppercase tracking-widest w-max mb-2">
+                      Best Seller
+                    </span>
+                    <h1 className="font-serif text-3xl font-bold text-[#1b1c17] mb-2">Morning Love Mugs</h1>
+                    <div className="flex items-center justify-between mb-4">
+                      <p className="font-serif text-2xl text-[#570013] font-bold">$34.00</p>
+                      <div className="flex text-[#e9c349]">
+                        {"★★★★★"} <span className="text-xs text-[#584141] ml-1">(128)</span>
+                      </div>
+                    </div>
+
+                    <div className="signature-divider my-2" />
+
+                    {/* Customizer */}
+                    <div className="bg-white rounded-2xl p-6 custom-shadow border border-[#e4e3db] mb-6">
+                      <h2 className="font-serif text-lg font-bold text-[#570013] mb-4 flex items-center">
+                        <span className="material-symbols-outlined text-[#D4AF37] mr-2">edit_note</span>
+                        Make It Yours
+                      </h2>
+                      <div className="space-y-4 text-left">
+                        <div>
+                          <label className="block text-xs uppercase font-semibold text-[#584141] mb-1">Mug 1 Name</label>
+                          <input
+                            type="text"
+                            value={mug1}
+                            onChange={(e) => setMug1(e.target.value)}
+                            className="w-full bg-[#FFFDF5] border border-[#e0bfbf] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#D4AF37]"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs uppercase font-semibold text-[#584141] mb-1">Mug 2 Name</label>
+                          <input
+                            type="text"
+                            value={mug2}
+                            onChange={(e) => setMug2(e.target.value)}
+                            className="w-full bg-[#FFFDF5] border border-[#e0bfbf] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#D4AF37]"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs uppercase font-semibold text-[#584141] mb-1">Est. Date</label>
+                          <input
+                            type="date"
+                            value={date}
+                            onChange={(e) => setDate(e.target.value)}
+                            className="w-full bg-[#FFFDF5] border border-[#e0bfbf] rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-[#D4AF37]"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Live Preview Display */}
+                      <div className="mt-5 p-4 bg-[#FFFDF5] rounded-xl border border-[#D4AF37]/50">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#735c00] block mb-2">
+                          Live Engraving Preview
+                        </span>
+                        <div className="grid grid-cols-2 gap-2 text-center">
+                          <div className="bg-white p-3 rounded-lg border border-[#FDF2F2] shadow-xs">
+                            <span className="text-[9px] text-[#735c00] uppercase block">Mug 1</span>
+                            <p className="font-serif italic font-bold text-[#570013] text-base">{mug1 || 'Hers'}</p>
+                          </div>
+                          <div className="bg-white p-3 rounded-lg border border-[#FDF2F2] shadow-xs">
+                            <span className="text-[9px] text-[#735c00] uppercase block">Mug 2</span>
+                            <p className="font-serif italic font-bold text-[#570013] text-base">{mug2 || 'His'}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex gap-4 mb-8">
+                      <button
+                        onClick={() => handleAddToCart('Morning Love Mugs')}
+                        className={`flex-1 py-4 rounded-full font-bold uppercase text-xs tracking-widest transition-all shadow-md ${
+                          addedAnim ? 'bg-[#735c00] text-white' : 'bg-[#570013] text-white hover:bg-[#800020] btn-hover-glow'
+                        }`}
+                      >
+                        {addedAnim ? 'Added to Gift Box! ♥' : 'Add to My Gift Box'}
+                      </button>
+                      <button
+                        onClick={() => toggleWish('morning-love-mugs')}
+                        className={`w-14 h-14 rounded-full border-2 flex items-center justify-center ${
+                          wishlist.includes('morning-love-mugs') ? 'bg-[#570013] border-[#570013] text-white' : 'border-[#e0bfbf] text-[#570013]'
+                        }`}
+                      >
+                        <span className="material-symbols-outlined" style={{ fontVariationSettings: wishlist.includes('morning-love-mugs') ? "'FILL' 1" : "'FILL' 0" }}>
+                          favorite
+                        </span>
+                      </button>
+                    </div>
+
+                    {/* Details Accordion */}
+                    <div className="border-t border-[#e0bfbf] divide-y divide-[#e0bfbf] text-left">
+                      <details className="py-3" open>
+                        <summary className="font-serif font-bold text-sm cursor-pointer text-[#1b1c17]">Description</summary>
+                        <p className="text-xs text-[#584141] mt-2 leading-relaxed">
+                          Start your mornings with intention and romance. Hand-glazed ceramic mugs with custom gold leaf personalizations.
+                        </p>
+                      </details>
+                      <details className="py-3">
+                        <summary className="font-serif font-bold text-sm cursor-pointer text-[#1b1c17]">Material &amp; Care</summary>
+                        <p className="text-xs text-[#584141] mt-2 leading-relaxed">
+                          High-fired ceramic, 11 oz capacity. Hand washing recommended for preserving gold lettering.
+                        </p>
+                      </details>
+                      <details className="py-3">
+                        <summary className="font-serif font-bold text-sm cursor-pointer text-[#1b1c17]">Shipping Info</summary>
+                        <p className="text-xs text-[#584141] mt-2 leading-relaxed">
+                          Complimentary luxury gift box packaging. 3-5 business days custom production.
+                        </p>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Complete the Gift */}
+                <div className="mt-16 pt-8 border-t border-[#e0bfbf] text-center">
+                  <h3 className="font-serif text-2xl font-bold text-[#570013] mb-6">Complete the Gift</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    {crossSellItems.map((item) => (
+                      <div key={item.id} className="bg-white rounded-2xl p-4 border border-[#FDF2F2] premium-shadow">
+                        <img src={item.img} className="w-full aspect-square object-cover rounded-xl mb-3" />
+                        <h4 className="font-serif font-bold text-sm text-[#1b1c17]">{item.title}</h4>
+                        <p className="text-[#570013] font-bold text-xs mb-3">{item.price}</p>
+                        <button
+                          onClick={() => handleAddToCart(item.title)}
+                          className="w-full py-2 rounded-full border border-[#570013] text-[#570013] text-[11px] font-bold uppercase hover:bg-[#570013] hover:text-white transition-all"
+                        >
+                          + Add to Gift Box
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </main>
+
+          {/* Footer */}
+          <footer className="py-12 border-t border-[#e0bfbf] bg-[#f0eee6]/60 text-center">
+            <h2 className="font-serif text-2xl font-bold text-[#570013] italic mb-1">Amore &amp; Co.</h2>
+            <p className="text-xs uppercase tracking-widest text-[#735c00] mb-4">Sophisticated Romance</p>
+            <p className="text-xs text-[#584141]">© {new Date().getFullYear()} Amore &amp; Co. All rights reserved.</p>
+          </footer>
+
+          {/* Toast */}
+          {toast && (
+            <div className="fixed bottom-6 right-6 z-50 bg-[#570013] text-white px-5 py-3 rounded-full shadow-2xl border border-[#D4AF37] text-xs font-semibold flex items-center gap-2">
+              <span className="text-[#D4AF37]">♥</span>
+              <span>{toast}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
